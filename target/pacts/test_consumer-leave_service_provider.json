@@ -1,0 +1,32 @@
+{
+    "provider": {
+        "name": "leave_service_provider"
+    },
+    "consumer": {
+        "name": "test_consumer"
+    },
+    "interactions": [
+        {
+            "description": "Leave Service",
+            "request": {
+                "method": "GET",
+                "path": "/leaves/11046"
+            },
+            "response": {
+                "status": 200,
+                "body": {
+                    "sick-leave": "2016-08-12"
+                }
+            },
+            "providerState": "leave service"
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "2.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.2.12"
+        }
+    }
+}

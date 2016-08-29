@@ -1,0 +1,12 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {    
+    testCompile 'junit:junit:4.12'
+    compile group: 'org.apache.httpcomponents', name: 'fluent-hc', version: '4.5.2'
+    testCompile 'au.com.dius:pact-jvm-consumer-junit_2.11:3.2.12'
+}
