@@ -14,8 +14,20 @@
             },
             "response": {
                 "status": 200,
+                "headers": {
+                    "Content-Type": "application/json; charset=UTF-8"
+                },
                 "body": {
+                    "created-at": "2016-08-30",
                     "project-id": "004c97"
+                },
+                "matchingRules": {
+                    "$.body.project-id": {
+                        "match": "type"
+                    },
+                    "$.body.created-at": {
+                        "date": "yyyy-MM-dd"
+                    }
                 }
             },
             "providerState": "project service"

@@ -14,8 +14,28 @@
             },
             "response": {
                 "status": 200,
+                "headers": {
+                    "Content-Type": "application/json; charset=UTF-8"
+                },
                 "body": {
-                    "sick-leave": "2016-08-12"
+                    "from": "2016-08-12",
+                    "hours": 8,
+                    "to": "2016-08-12",
+                    "type": "SICK_LEAVE"
+                },
+                "matchingRules": {
+                    "$.body.type": {
+                        "match": "type"
+                    },
+                    "$.body.to": {
+                        "date": "yyyy-MM-dd"
+                    },
+                    "$.body.hours": {
+                        "match": "integer"
+                    },
+                    "$.body.from": {
+                        "date": "yyyy-MM-dd"
+                    }
                 }
             },
             "providerState": "leave service"
